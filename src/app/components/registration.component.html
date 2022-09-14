@@ -1,0 +1,27 @@
+
+<form [formGroup]="form" (ngSubmit)="processRegistration()">
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td>
+          <input type="text" size="30" formControlName="name">
+        </td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td>
+          <input type="email" size="30" formControlName="email">
+        </td>
+        <tr>
+          <td></td>
+          <td>
+            <div style="display: flex; justify-content: end;">
+              <button type="submit" class="btn btn-primary btn-lg"
+                [disabled]="form.invalid">
+                Register Me
+              </button>
+            </div>
+        </td>
+      </tr>
+    </table>
+    </form>
